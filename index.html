@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Map of Inspection Intervals</title>
+    <link rel="stylesheet" href="/sources/leaflet.css" />
+    <script src="/sources/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header class="navbar">
+      <nav class="left">
+        <div><input id="input" type="file"></div>
+      </nav>
+      <nav class="middle">
+        <div>
+          <p>Map of Earthwork Principal Inspection Intervals</p>
+        </div>
+      </nav>
+      <nav class="right">
+        <div id="help"></div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="map">
+        <div id="map"></div>
+      </div>
+      <div class="sidebar">
+        <div class="legend">
+          <p class="legend-title">Map Legend</p>
+          <p id="visible-layer"></p>
+          <svg width="100%">
+            <line x1="10" y1="10" x2="40" y2="10" style="stroke: #ff860d; stroke-width: 2;" />
+            <text x="50" y="15" style="font-family:Open Sans; font-size:0.75rem">
+              1 to 3 years (High Risk)
+            </text>
+
+            <line x1="10" y1="40" x2="40" y2="40" style="stroke: #5983b0; stroke-width: 2;" />
+            <text x="50" y="45" style="font-family:Open Sans; font-size:0.75rem">
+              4 to 7 years (Average Risk)
+            </text>
+
+            <line x1="10" y1="70" x2="40" y2="70" style="stroke: #81aca6; stroke-width: 2;" />
+            <text x="50" y="75" style="font-family:Open Sans; font-size:0.75rem">
+              8 to 9 years (Low Risk)
+            </text>
+
+            <line x1="10" y1="100" x2="40" y2="100" style="stroke: #3faf46; stroke-width: 2;" />
+            <text x="50" y="105" style="font-family:Open Sans; font-size:0.75rem">
+              10 years (Very Low Risk)
+            </text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+
+</html>
